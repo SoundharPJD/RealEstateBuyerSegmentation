@@ -11,7 +11,7 @@ from sklearn.preprocessing import StandardScaler
 
 input_file = "data/processed/ml_ready_data.csv"
 
-output_file = ""segmented_buyers.csv""
+output_file = "data/processed/segmented_buyers.csv"
 
 model_file = "models/buyer_segmentation_model.pkl"
 

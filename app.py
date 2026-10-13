@@ -386,7 +386,7 @@ div[data-baseweb="select"] {
 # FILE PATHS
 # =========================================================
 
-DATA_PATH = ""segmented_buyers.csv""
+DATA_PATH = "data/processed/"
 
 MODEL_PATH = "models/buyer_segmentation_model.pkl"
 
@@ -416,7 +416,7 @@ def get_segment_name(segment):
 
         return segment_names.get(
             number,
-            f"K-Means Segment {number}"
+            f"K-Means data/processed/segmented_buyers.csv {number}"
         )
 
     except:
@@ -502,7 +502,7 @@ if not os.path.exists(DATA_PATH):
     )
 
     st.code(
-        ""segmented_buyers.csv""
+        "data/processed/segmented_buyers.csv"
     )
 
     st.info(

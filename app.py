@@ -386,7 +386,7 @@ div[data-baseweb="select"] {
 # FILE PATHS
 # =========================================================
 
-DATA_PATH = "data/processed/"
+DATA_PATH = "data/processed/segmented_buyers.csv"
 
 MODEL_PATH = "models/buyer_segmentation_model.pkl"
 
@@ -398,32 +398,54 @@ ANALYSIS_PATH = "data/processed/segment_analysis.csv"
 # =========================================================
 
 segment_names = {
-
     1: "K-Means Segment 1",
-
     2: "K-Means Segment 2",
-
     3: "K-Means Segment 3"
-
 }
 
 
 def get_segment_name(segment):
-
     try:
-
         number = int(segment)
 
         return segment_names.get(
             number,
-            f"K-Means data/processed/segmented_buyers.csv {number}"
+            f"K-Means Segment {number}"
         )
 
-    except:
-
+    except Exception:
         return str(segment)
 
 
+# =========================================================
+# CHECK DATA
+# =========================================================
+
+if not os.path.isfile(DATA_PATH):
+
+    st.error("❌ Buyer dataset was not found.")
+
+    st.write("Expected file:")
+
+    st.code(DATA_PATH)
+
+    st.stop()
+
+
+# =========================================================
+# LOAD DATA
+# =========================================================
+
+try:
+    df = pd.read_csv(DATA_PATH)
+
+except Exception as e:
+
+    st.error("Unable to load dataset.")
+
+    st.code(str(e))
+
+    st.stop()
 # =========================================================
 # SIDEBAR
 # =========================================================

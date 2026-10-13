@@ -137,7 +137,7 @@ st.markdown(
 # FILE PATHS
 # =========================================================
 
-DATA_PATH = "data/processed/segmented_buyers.csv"
+DATA_PATH = ""segmented_buyers.csv""
 
 MODEL_PATH = "models/buyer_segmentation_model.pkl"
 

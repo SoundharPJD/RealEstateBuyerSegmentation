@@ -4,7 +4,7 @@ import pandas as pd
 # STEP 12 - UNDERSTAND BUYER SEGMENTS
 # ---------------------------------------------------------
 
-input_file = "data/processed/segmented_buyers.csv"
+input_file = ""segmented_buyers.csv""
 
 df = pd.read_csv(input_file)
 

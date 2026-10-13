@@ -386,7 +386,7 @@ div[data-baseweb="select"] {
 # FILE PATHS
 # =========================================================
 
-DATA_PATH = "data/processed/segmented_buyers.csv"
+DATA_PATH = ""segmented_buyers.csv""
 
 MODEL_PATH = "models/buyer_segmentation_model.pkl"
 
@@ -502,7 +502,7 @@ if not os.path.exists(DATA_PATH):
     )
 
     st.code(
-        "data/processed/segmented_buyers.csv"
+        ""segmented_buyers.csv""
     )
 
     st.info(
